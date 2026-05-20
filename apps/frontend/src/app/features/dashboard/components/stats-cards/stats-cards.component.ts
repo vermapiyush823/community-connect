@@ -17,7 +17,7 @@ interface StatCard {
 @Component({
   selector: 'app-stats-cards',
   standalone: true,
-  imports: [DecimalPipe, MatCardModule, MatIconModule],
+  imports: [MatCardModule, MatIconModule],
   template: `
     <div class="stats-grid">
       @for (card of statCards; track card.key) {
