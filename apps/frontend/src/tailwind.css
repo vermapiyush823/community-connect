@@ -1,0 +1,2 @@
+/* Tailwind CSS v4 — disabled preflight to avoid Angular Material conflicts */
+@import "tailwindcss/utilities" layer(utilities);

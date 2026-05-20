@@ -1,0 +1,35 @@
+{
+  "name": "community-connect",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Community Connect — A modern community/social organization platform",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter frontend dev\" \"pnpm --filter backend dev\"",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "build": "pnpm --filter shared build && pnpm --filter backend build && pnpm --filter frontend build",
+    "build:frontend": "pnpm --filter frontend build",
+    "build:backend": "pnpm --filter backend build",
+    "seed": "pnpm --filter backend seed",
+    "lint": "pnpm -r lint",
+    "format": "prettier --write \"**/*.{ts,html,scss,json,md}\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "concurrently": "^9.1.0",
+    "husky": "^9.1.0",
+    "lint-staged": "^15.4.0",
+    "prettier": "^3.4.0"
+  },
+  "lint-staged": {
+    "*.{ts,html,scss}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}
